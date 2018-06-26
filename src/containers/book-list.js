@@ -17,7 +17,11 @@ class BookList extends Component {
     return this.props.books.map((book) => {
       return (
         // Since it's a list, we need a key. Unique value for the key will be the title
-        <li key={book.title} className="list-group-item">{book.title}</li>
+        <li onClick={() => this.props.selectBook()} 
+          key={book.title}
+          className="list-group-item">
+          {book.title}
+        </li>
       )
     });
   }
